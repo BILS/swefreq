@@ -163,8 +163,6 @@ def get_coverage_for_bases(dataset: str, chrom: str, start_pos: int,
                            (db.Coverage.chrom == chrom) &
                            (db.Coverage.dataset_version == dataset_version.id))
                     .dicts())
-    if not coverage:
-        raise error.NotFoundError('No coverage found for the region')
     return coverage
 
 
